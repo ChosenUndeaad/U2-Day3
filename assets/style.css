@@ -75,10 +75,62 @@ article div {
 #honey {
   margin: 1em 0em 1em 1em;
   flex-wrap: wrap;
+  width: auto;
+  object-fit: contain;
 }
 
 .card-content {
   flex-grow: 1;
+}
+
+.honey-card {
+  display: flex;
+  background-color: #fbf7e3;
+  border-radius: 50px;
+  margin: 1em;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fbf7e3;
+  border-radius: 50px;
+  width: 200px;
+  text-align: center;
+  width: 300px;
+  margin: 0.5em;
+}
+
+.card h3 {
+  margin: 1em;
+  font-size: 1.2em;
+}
+
+.card button {
+  background-color: #f3df85;
+  color: #612406;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.card button:hover {
+  background-color: #e69500;
+  color: #612406;
+}
+
+.card img {
+  border-radius: 50px 50px 0 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
 }
 
 /* MOBILE */
@@ -95,21 +147,21 @@ article div {
   nav ul {
     flex-direction: column;
   }
-}
 
-@media screen and (max-width: 576px) {
   article {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   article div {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
   }
 
   #honey {
     margin: 1em 0em;
+    width: auto;
+    object-fit: contain;
   }
 
   article div img {
