@@ -7,7 +7,7 @@ nav {
   background-color: #fbf7e3;
   border-radius: 50px;
   display: flex;
-  justify-content: center; /* Centra la barra di navigazione orizzontalmente */
+  justify-content: center;
   align-items: center;
   height: 100px;
   padding: 1em;
@@ -22,6 +22,7 @@ nav ul {
   justify-content: center;
   align-items: center;
   gap: 0.5em;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -33,6 +34,7 @@ nav ul li {
   justify-content: center;
   align-items: center;
   padding: 0.5em;
+  flex-wrap: wrap;
 }
 
 nav ul li img {
@@ -63,11 +65,54 @@ main article {
 }
 
 article div {
-  padding: 1em 1em;
+  padding: 1em;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
 }
 
 #honey {
   margin: 1em 0em 1em 1em;
+  flex-wrap: wrap;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 576px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  article {
+    flex-direction: column;
+  }
+
+  article div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #honey {
+    margin: 1em 0em;
+  }
+
+  article div img {
+    order: -1;
+  }
 }
